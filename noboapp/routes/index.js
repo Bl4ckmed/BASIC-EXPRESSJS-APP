@@ -29,11 +29,11 @@ router.get('/api/p2', function(req, res, next) {
 
 /* POST form variables in annexe 1 */ 
 router.post('/api/p2', function(req, res){
-  console.log(req.body.string);
-  var chaine=req.body.date1;
-  var num=req.body.date2; 
+  console.log(req.body);
+  var date1=req.body.date1;
+  var date2=req.body.date2; 
   
-  res.send(annexes.p2(date1, date1));
+  res.send(annexes.p2(date1, date2));
   
 });
 
