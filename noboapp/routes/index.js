@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-
+var annexes = require('../controllers/annexes')
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
@@ -14,15 +14,12 @@ router.post('/', function(req, res){
   var num=parseInt(req.body.number); 
   if (num>=0 && num<=20 && chaine.length>0 )
   {
-    var a=chaine.len/num
-    console.log(chaine.len)
-    console.log(num)
-    console.log(a)
-    res.send(String(a));
+    var a=annexes.p1(chaine, num)
+    res.send("The result is:" + String(a));
   } 
   else 
   {
-    res.send("recieved your request!");
+    res.send("Input conditions not respected");
   }
 });
 /* GET SECOND PAGE */
