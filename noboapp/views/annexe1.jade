@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  h1= "TEST  TECHNIQUE NOBO, BELLAKHAL MOHAMED "
+  //- p Welcome to #{title}
+  p Welcome to My NOBO technical test express app , Program 1 
+  body
+      form(action = "/api/p1", method = "POST")
+         div
+            label(for = "string") Input String
+            input(name = "string" value = "Hi")
+         br
+         div
+            label(for = "number") Input Number
+            input(name = "number" value = "Express forms")
+         br
+         button(type = "submit") Submit values 

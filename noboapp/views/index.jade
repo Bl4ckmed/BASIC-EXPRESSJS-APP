@@ -3,15 +3,10 @@ extends layout
 block content
   h1= "TEST  TECHNIQUE NOBO, BELLAKHAL MOHAMED "
   //- p Welcome to #{title}
-  p Welcome to My NOBO technical test express app 
+  p Welcome to My NOBO technical test express app
+  p To see the solution of the first program, click Programme 1
+  p To see the solution of the first program, click Programme 2
   body
-      form(action = "/", method = "POST")
-         div
-            label(for = "string") Input String
-            input(name = "string" value = "Hi")
-         br
-         div
-            label(for = "number") Input Number
-            input(name = "number" value = "Express forms")
-         br
-         button(type = "submit") Submit values 
+      a(href='/api/p1' type='button')  Programme 1
+      
+

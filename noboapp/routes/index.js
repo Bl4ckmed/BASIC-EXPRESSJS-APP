@@ -4,28 +4,37 @@ var router = express.Router();
 var annexes = require('../controllers/annexes')
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: 'Nobo_EXPRESS_APP' });
 });
 
-/* POST form variables */ 
-router.post('/', function(req, res){
+/* GET annexe 1 page. */
+router.get('/api/p1', function(req, res, next) {
+  res.render('annexe1', { title: 'Nobo_EXPRESS_APP' });
+});
+
+/* POST form variables in annexe 1 */ 
+router.post('/api/p1', function(req, res){
   console.log(req.body.string);
-  var chaine=String(req.body.string);
-  var num=parseInt(req.body.number); 
-  if (num>=0 && num<=20 && chaine.length>0 )
-  {
-    var a=annexes.p1(chaine, num)
-    res.send("The result is:" + String(a));
-  } 
-  else 
-  {
-    res.send("Input conditions not respected");
-  }
-});
-/* GET SECOND PAGE */
-router.get('/Annexe2', function(req, res){
-   res.send("Hello World!");
+  var chaine=req.body.string;
+  var num=req.body.number; 
+  
+  res.send(annexes.p1(chaine, num));
+  
 });
 
+/* GET annexe 2 page. */
+router.get('/api/p2', function(req, res, next) {
+  res.render('annexe2', { title: 'Nobo_EXPRESS_APP' });
+});
+
+/* POST form variables in annexe 1 */ 
+router.post('/api/p2', function(req, res){
+  console.log(req.body.string);
+  var chaine=req.body.date1;
+  var num=req.body.date2; 
+  
+  res.send(annexes.p2(date1, date1));
+  
+});
 
 module.exports = router;
