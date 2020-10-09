@@ -1,9 +1,10 @@
 exports.p1 =  function(str,num) {
     num=parseInt(num);
-    
-    /*calculating the length of the string */
+
+    // calculer la longeur de la chaine en input 
     n=String(str).length;
 
+    // cas de division par 0 
     if (num==0)
     {
       return "error : cannot divide by 0"

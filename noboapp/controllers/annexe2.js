@@ -12,7 +12,7 @@ exports.p2 =  function(start_date,end_date) {
       if (end_date.length >0)
       {
         var end=new Date(end_date);
-        /* getting the last day of the month of end_date*/    
+        /* obtention du dernier jour du mois pour le end_date*/    
         int_d = new Date(end.getYear(), end.getMonth()+1,1);
         d = new Date(int_d - 1);
         

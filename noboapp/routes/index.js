@@ -12,7 +12,7 @@ router.get('/api/p1', function(req, res, next) {
   res.render('annexe1', { title: 'Nobo_EXPRESS_APP' });
 });
 
-/* POST form variables in annexe 1 */ 
+/* requete POST des variables pour annexe 1 */ 
 router.post('/api/p1', function(req, res){
   console.log(req.body.string);
   var chaine=req.body.string;
@@ -28,7 +28,7 @@ router.get('/api/p2', function(req, res, next) {
   res.render('annexe2', { title: 'Nobo_EXPRESS_APP' });
 });
 
-/* POST form variables in annexe 1 */ 
+/* requete POST des variables pour annexe 2 */ 
 router.post('/api/p2', function(req, res){
   console.log(req.body);
   var date1=req.body.date1;
