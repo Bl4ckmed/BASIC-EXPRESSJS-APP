@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-var annexes = require('../controllers/annexes')
+var annexes = require('../controllers/annexe1')
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Nobo_EXPRESS_APP' });
@@ -21,6 +21,7 @@ router.post('/api/p1', function(req, res){
   res.send(annexes.p1(chaine, num));
   
 });
+var annexes2= require('../controllers/annexe2')
 
 /* GET annexe 2 page. */
 router.get('/api/p2', function(req, res, next) {
@@ -33,7 +34,7 @@ router.post('/api/p2', function(req, res){
   var date1=req.body.date1;
   var date2=req.body.date2; 
   
-  res.send(annexes.p2(date1, date2));
+  res.send(annexes2.p2(date1, date2));
   
 });
 
