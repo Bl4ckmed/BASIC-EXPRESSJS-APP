@@ -1,11 +1,15 @@
 exports.p2 =  function(start_date,end_date) {
-    s=0
-    if (start_date!== " ")
+    var start= new Date(start_date); 
+    if (start_date.length==0)
     {
-      var start= new Date(start_date); 
+      return "Please enter a valid start date";
+    }
+    else 
+    {
+         
       s=start.getDate()-1;
       
-      if (end_date!= null)
+      if (end_date.length >0)
       {
         var end=new Date(end_date);
         /* getting the last day of the month of end_date*/    
@@ -16,10 +20,7 @@ exports.p2 =  function(start_date,end_date) {
       }
    
       return String(s)+" jours";
-    }
-    else 
-    {
-      return "Please enter a valid start date";
+      
     }
     
   }
