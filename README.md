@@ -1,4 +1,4 @@
-# Test technique Nobo, Application express de Bellakhal Mohamed 
-Dans cette application, vous trouverez une couche Business (controllers) qui contient les programmes 1 et 2 demandée , une couche de routage (routers) afin de créer les api nécéssaires, le module views qui contient une présentation du travail élaboré et finalement un module test contenant les tests unitaires de la partie 1 et partie 2 
+# Basic express.js app 
+In this application, you will find a Business layer (controllers) which contains the requested programs 1 and 2, a routing layer (routers) in order to create the necessary applications, the views module which contains a presentation of the elaborated work and finally a test module containing the unit tests of part 1 and part 2
 
-Le rendu une fois téléchargé est éxecutable avec les commandes suivantes: npm install && npm start comme indiqué dans les spécifications du test technique 
+The rendering once downloaded can be executed with the following commands: npm install && npm start as indicated in the technical test specifications
